@@ -1,0 +1,3 @@
+25/02/2026 --> Primeros pasos de la práctica. Puesto en funcionamiento el docker y aprendido como se acelera y se gira el vehiculo.
+1/03/2026 --> Mascara para detectar la linea en imagen binaria. Como no consigo extraer la imagen guardandola desde unibotics me guiaré por sus dimensiones para realizar la busqueda 
+              de donde se encuentra la linea en un momento dado.
