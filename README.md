@@ -1,8 +1,12 @@
-##Blog de Prácticas de Visión Robotica de Jaime San José Villar
-25/02/2026 --> Primeros pasos de la práctica. Puesto en funcionamiento el docker y aprendido como se acelera y se gira el vehiculo.
-1/03/2026 --> Mascara para detectar la linea en imagen binaria. Como no consigo extraer la imagen guardandola desde unibotics me guiaré por sus dimensiones para realizar la busqueda 
-              de donde se encuentra la linea en un momento dado.
-4/03/2026 --> Primera verisón funcional con controlador proporcional. Oscila en las curvas. Tiempo de vuelta: 150.36 segundos 
-8/03/2026 --> Implementado controlador PD. Mejores tiempos cerca del minuto. También implemento velocidades diferentes para curva y recta. Cambio del aspecto del blog para mayor legibilidad.
+# Blog de Prácticas de Visión Robotica de Jaime San José Villar
+## FollowLine
+### 25/02/2026
+Primeros pasos de la práctica. Puesto en funcionamiento el docker y aprendido como se acelera y se gira el vehiculo.
+### 1/03/2026 
+Mascara para detectar la linea en imagen binaria. Como no consigo extraer la imagen guardandola desde unibotics me guiaré por sus dimensiones para realizar la busqueda de donde se encuentra la linea en un momento dado.
+### 4/03/2026 
+Primera verisón funcional con controlador proporcional. Oscila en las curvas. Tiempo de vuelta: 150.36 segundos 
+### 8/03/2026 
+Implementado controlador PD. Mejores tiempos cerca del minuto. También implemento velocidades diferentes para curva y recta. Cambio del aspecto del blog para mayor legibilidad.
 
-#Estructura de la solución
+## Estructura de la solución
