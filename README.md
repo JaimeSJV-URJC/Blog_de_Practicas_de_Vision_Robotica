@@ -17,7 +17,7 @@ Nurburgring me da problemas a la salida. No se porque pero nada más empezar el 
 
 <img width="1021" height="367" alt="imagen_2026-03-09_204621746" src="https://github.com/user-attachments/assets/756879c7-fb30-45c2-add5-5fee052b0677" />
 
-## 10/03/2026
+### 10/03/2026
 Otra vuelta completada en Montmelo. Si el controlador va con velocidad unica parece capaz de terminar la vuelta de forma consistente. Hay algo en las ultimas curvas, algún tipo de variación inperceptible al ojo humano, que hace fallar el controlador. Me es claro empiricamente al ver funcionar al coche que no se comporta de la misma manera en las ultimas curvas de Montmelo como en el resto del circuito.
 
 ![Monrmelo2](https://github.com/user-attachments/assets/ff8a59c5-d3df-422f-a999-d4b656d1e1db)
