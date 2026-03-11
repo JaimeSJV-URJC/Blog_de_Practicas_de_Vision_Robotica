@@ -32,3 +32,7 @@ Es obvio que aunque se completa la vuelta al circuito simple en un tiempo razona
 
 ## Estructura de la solución
 Para realizar FollowLine he probado controladores P y PD, siendo la implementación final PD. El controlador utiliza una velocidad varible para rectas y curvas determinada por un punto superior en la visualización en la linea al punto utilizado para controlar el giro. Utilizo este punto superior para que la curva sea detectada antes, y así poder reducir la velocidad a tiempo para tomar la curva sin perder la linea. Al probar controladores he obtenido tiempos inferiores al de la solución final, controladores con menor oscilación que eran también más lentos. Con la solución pretendo tener un equilibrio entre velocidad y reducción de oscilación. 
+
+## Recontrucción 3D
+### 11/03/2026
+Primeros pasos en clase. Entendiendo lo que es necesario para realizar el ejercicio y las funciones especificas de camara y dibujo.
