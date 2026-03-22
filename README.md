@@ -36,3 +36,18 @@ Para realizar FollowLine he probado controladores P y PD, siendo la implementaci
 ## Recontrucción 3D
 ### 11/03/2026
 Primeros pasos en clase. Entendiendo lo que es necesario para realizar el ejercicio y las funciones especificas de camara y dibujo.
+
+### 18/03/2026
+Problemas con el docker. Intentando solucionarlo en clase pero no lo he conseguido.
+
+### 19/03/2026
+Docker listo gracias a compañeros en clase. Probando formas de hacer matching por parches.
+
+### 20/03/2026
+Siguiendo con el matching. Sin avances.
+
+### 21/03/2026
+Matching inicial creo que completado. Intentando realizar el matching por la linea epipolar. Repasando Visión 3D para realizar la triangulación.
+
+### 22/03/2026
+Matching epipolar y triangulación completados. Obtengo 268 puntos. Falla en los primeros intentos de representación.
