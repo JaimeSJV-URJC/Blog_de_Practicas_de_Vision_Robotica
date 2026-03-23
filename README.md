@@ -51,3 +51,8 @@ Matching inicial creo que completado. Intentando realizar el matching por la lin
 
 ### 22/03/2026
 Matching epipolar y triangulación completados. Obtengo 268 puntos. Falla en los primeros intentos de representación.
+
+<img width="340" height="259" alt="imagen_2026-03-23_210248707" src="https://github.com/user-attachments/assets/101e3c1b-fe54-465d-9a62-fbf77fab7cf1" />
+
+### 23/03/2026
+Sigo fallando en la representación 3D. Se forma una linea de puntos en vez de asignarse los puntos a su lugar correspondiente. 
