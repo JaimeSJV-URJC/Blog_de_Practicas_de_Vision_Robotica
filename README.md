@@ -56,3 +56,6 @@ Matching epipolar y triangulación completados. Obtengo 268 puntos. Falla en los
 
 ### 23/03/2026
 Sigo fallando en la representación 3D. Se forma una linea de puntos en vez de asignarse los puntos a su lugar correspondiente. 
+
+### 24/03/2026
+Me he dado cuenta de que lo estaba haciendo mal. Aunque los conceptos principales eran correctos la estructura de la solución no conseguia una reconstrucción aceptable. Basicamente, he empezado de nuevo siguiendo los pasos de la pagina de Robotics Academy. Me ha llevado bastante tiempo pero creo que la estructura ahora es correcta. Consigo proyectar una nube de puntos pero esta del reves y no es de muy buena calidad.
