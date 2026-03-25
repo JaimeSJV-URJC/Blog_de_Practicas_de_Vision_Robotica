@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/f94e9f7e-2edd-4c58-a98d-8c4c3bd13e9d
 
 Es obvio que aunque se completa la vuelta al circuito simple en un tiempo razonable hay margen de mejora para el controlador. 
 
-## Estructura de la solución
+## Estructura de la solución FollowLine
 Para realizar FollowLine he probado controladores P y PD, siendo la implementación final PD. El controlador utiliza una velocidad varible para rectas y curvas determinada por un punto superior en la visualización en la linea al punto utilizado para controlar el giro. Utilizo este punto superior para que la curva sea detectada antes, y así poder reducir la velocidad a tiempo para tomar la curva sin perder la linea. Al probar controladores he obtenido tiempos inferiores al de la solución final, controladores con menor oscilación que eran también más lentos. Con la solución pretendo tener un equilibrio entre velocidad y reducción de oscilación. 
 
 ## Recontrucción 3D
@@ -59,3 +59,24 @@ Sigo fallando en la representación 3D. Se forma una linea de puntos en vez de a
 
 ### 24/03/2026
 Me he dado cuenta de que lo estaba haciendo mal. Aunque los conceptos principales eran correctos la estructura de la solución no conseguia una reconstrucción aceptable. Basicamente, he empezado de nuevo siguiendo los pasos de la pagina de Robotics Academy. Me ha llevado bastante tiempo pero creo que la estructura ahora es correcta. Consigo proyectar una nube de puntos pero esta del reves y no es de muy buena calidad.
+
+### 25/03/2026
+Noche del ultimo día creo que he conseguido una solución decente que cumple los parametros del enunciado, pero puede ser que me este intentando convencer a mi mismo porque me ha costado mucho. No se tampoco que forma habría de mover las camaras para probarlo.
+
+![Reconstrucción3D](https://github.com/user-attachments/assets/56e0b917-5773-4e71-b52d-a7f47d91f2bb)
+
+Comprobar los emparejamientos de derecha a izquierda me elimina bastante ruido, pero bastantes puntos perduran incorrectos en la derecha como se ve en la siguiente imagen.
+
+![Ruido3D](https://github.com/user-attachments/assets/0f770e11-6400-4b00-9ac8-f9dbdce53398)
+
+## Estructura de la solución Reconstrución 3D
+La solución funciona realizando los siguientes pasos:
+  1. Se procesan las imagen aplicando un filtro bilateral y Canny
+  2. Se recorre la imagen de bordes buscando puntos caracteristicos
+  3. Encontrado un punto de borde en la imagen izquierda se calcula su linea Epipolar
+  4. Se busca una pareja a lo largo de la linea epipolar con cv2.matchTemplate en la imagen derecha
+  5. Se comprueba la pareja buscando de derecha a izquierda
+  6. Triangulación
+  7. Proyección con HAL.project3DScene
+  8. Representación con WebGUI.ShowAllPoints
+
