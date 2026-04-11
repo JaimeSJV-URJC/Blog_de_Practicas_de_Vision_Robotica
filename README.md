@@ -80,3 +80,6 @@ La solución funciona realizando los siguientes pasos:
   7. Proyección con HAL.project3DScene
   8. Representación con WebGUI.ShowAllPoints
 
+## Recontrucción 3D
+### 11/04/2026
+Sesiones pasadas no las apunté, por lo que continuo desde hoy. He estado con los puntos 2D y 3D, consiguiendolos del AprilTag con mayor linea de A a B. Utilizo estos puntos para aplicar cv2.solvePNP. Continuaré mañana con movimiento y la aplicación de la odometría.
