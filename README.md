@@ -82,4 +82,7 @@ La solución funciona realizando los siguientes pasos:
 
 ## Recontrucción 3D
 ### 11/04/2026
-Sesiones pasadas no las apunté, por lo que continuo desde hoy. He estado con los puntos 2D y 3D, consiguiendolos del AprilTag con mayor linea de A a B. Utilizo estos puntos para aplicar cv2.solvePNP. Continuaré mañana con movimiento y la aplicación de la odometría.
+Sesiones pasadas no las apunté, por lo que continuo desde hoy. He estado con los puntos 2D y 3D, consiguiendolos del AprilTag con mayor linea de A a B. Utilizo estos puntos para aplicar cv2.solvePNP, pero hay que arreglar algo que falla con la estimación. Continuaré mañana con el arreglo de pnp, movimiento y la aplicación de la odometría.
+
+## 12/04/2026
+Estimación arreglada y movimiento hacia el tag hecho(controlador proporcional). No me ha dado tiempo ha implementar la odometría. Mañana ultimo sprint y a rematar la práctica.
