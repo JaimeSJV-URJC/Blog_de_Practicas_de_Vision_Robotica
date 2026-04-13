@@ -80,9 +80,20 @@ La solución funciona realizando los siguientes pasos:
   7. Proyección con HAL.project3DScene
   8. Representación con WebGUI.ShowAllPoints
 
-## Recontrucción 3D
+## Marker Visual Loc
 ### 11/04/2026
 Sesiones pasadas no las apunté, por lo que continuo desde hoy. He estado con los puntos 2D y 3D, consiguiendolos del AprilTag con mayor linea de A a B. Utilizo estos puntos para aplicar cv2.solvePNP, pero hay que arreglar algo que falla con la estimación. Continuaré mañana con el arreglo de pnp, movimiento y la aplicación de la odometría.
 
-## 12/04/2026
+### 12/04/2026
 Estimación arreglada y movimiento hacia el tag hecho(controlador proporcional). No me ha dado tiempo ha implementar la odometría. Mañana ultimo sprint y a rematar la práctica.
+
+### 13/04/2026
+Odometría implementada. Me daba problemas pasar de la estimación con AprilTag a estimación con odometría, pero se ha arreglado con un threshold para que no salte la estimación.
+
+## Estructura de la solución Marker Visual Loc
+El robot deambula en linea recta, ocurriendo lo siguiente dependiendo del entorno:
+  1. Encuentra un AprilTag --> Se despaza en su dirección mediante un controlador proporcional --> Deja de detectar AprilTag --> Gira 100º en negativo o positivo aleatoriamente
+  2. Encuentra un obstaculo --> Gira 100º en negativo o positivo aleatoriamente
+Se prioriza la estimación de perpective n poits para localizar al robot. Cuando no se encuentra AprilTag, se estima la posición con odometría a partir de la ultima posición estimada con pnp. Una imagen de la estimación a lo largo del tiempo:
+
+![Resultado](https://github.com/user-attachments/assets/620bf889-bbc4-4e52-8ef1-8de407282076)
