@@ -97,3 +97,10 @@ El robot deambula en linea recta, ocurriendo lo siguiente dependiendo del entorn
 Se prioriza la estimación de perpective n poits para localizar al robot. Cuando no se encuentra AprilTag, se estima la posición con odometría a partir de la ultima posición estimada con pnp. Una imagen de la estimación a lo largo del tiempo:
 
 ![Resultado](https://github.com/user-attachments/assets/620bf889-bbc4-4e52-8ef1-8de407282076)
+
+
+## End to end FollowLine
+### 04/05/2026
+De nuevo, se me olvido hacer el blog de sesiones anteriores. Basicamente hice el codigo para entrenar y exportar el modelo, y la parte de unibotics para tomar la imagen y usarlo. Me tube que pelear un poco con el codigo porque "from model import model_path" no me servía para cargar el modelo y no entendia porque. Una cosa tan tonta como especificar el path mediante "model_path = "/workspace/code/model.onnx""
+
+Hoy he empezado el día muy nervioso porque después de entrenar ocurría exactactamente lo discutido en clase: el coche iva recto y en la primera curva se estampaba. Como estaba usando el dataset combinado, que en teoría esta balanceado, esto me había sorprendido. El primer posible culpable me ha venido a la mente es el overfitting, por lo que hoy he reducido significativamente las epocas y he vuelto a entrenar. Al volver a probar el modelo funciona bastante bien, completando vueltas en Simple Circuit, Montmelo y Nurburgring sin problemas y con muy poca oscilación. Si no hay cambios en el enunciado estaría ya hecha esta práctica y actualizaré el blog para dar más información sobre la solución.
