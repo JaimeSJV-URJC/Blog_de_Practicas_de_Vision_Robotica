@@ -104,3 +104,19 @@ Se prioriza la estimación de perpective n poits para localizar al robot. Cuando
 De nuevo, se me olvido hacer el blog de sesiones anteriores. Basicamente hice el codigo para entrenar y exportar el modelo, y la parte de unibotics para tomar la imagen y usarlo. Me tube que pelear un poco con el codigo porque "from model import model_path" no me servía para cargar el modelo y no entendia porque. Una cosa tan tonta como especificar el path mediante "model_path = "/workspace/code/model.onnx""
 
 Hoy he empezado el día muy nervioso porque después de entrenar ocurría exactactamente lo discutido en clase: el coche iva recto y en la primera curva se estampaba. Como estaba usando el dataset combinado, que en teoría esta balanceado, esto me había sorprendido. El primer posible culpable me ha venido a la mente es el overfitting, por lo que hoy he reducido significativamente las epocas y he vuelto a entrenar. Al volver a probar el modelo funciona bastante bien, completando vueltas en Simple Circuit, Montmelo y Nurburgring sin problemas y con muy poca oscilación. Si no hay cambios en el enunciado estaría ya hecha esta práctica y actualizaré el blog para dar más información sobre la solución.
+
+### 07/05/2026
+Actualizando el blog por ultima vez. Subo algunos videos del funcionamiento del modelo sobre los circuitos. Completa los cuatro circuitos disponobles sin problemas. La ultima parte del simple circuit:
+
+https://github.com/user-attachments/assets/9c3ab6f2-9e6f-4c9d-a176-088af40aee3b
+
+Tampoco tiene problemas en las ultimas curbas de Montmelo que me daban problemas con PD:
+
+
+https://github.com/user-attachments/assets/79cfa995-6371-4c94-b189-e6b8f646edd1
+
+El modelo tiene un poco de oscilación y algún comportamiento más raro donde se situa a la derecha de una linea recta y no converge al centro. También se podrian realizar mejoras para el modelo recortando la imagen además de la normalización que ya se realiza, pero hay más cosas que hacer por lo que lo voy a dejar así.
+
+## Estructura de la solución
+Se utiliza una Red PilotNet, entrenada con el ConbineCircuit dataset. Se realiza el entrenamiento en 5 epocas con MSE como función de perdida y optimizador Adam. 
+
